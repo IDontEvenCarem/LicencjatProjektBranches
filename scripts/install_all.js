@@ -17,13 +17,13 @@ async function Main () {
 
     for(const branch of deployableBranches) {
         try {
-
             console.log("Setting up", branch);
             const localPath = path.resolve(__dirname, '..', installsFolder, branch)
             await fs.mkdir(localPath, {recursive: true})
             await fs.cp(tempPath, localPath, {recursive: true})
             const localGit = simpleGit.simpleGit(localPath)
-            await localGit.checkout(branch);
+            await localGit.clean(simpleGit.CleanOptions.FORCE);
+            await localGit.checkout([branch, '--force']);
             await new Promise((res, rej) => {
                 exec("npm i", {cwd: localPath}, (err, stdout, stderr) => {
                     if (err) {
