@@ -1,3 +1,4 @@
+const { exec } = require('child_process')
 const os = require('os')
 const fs = require('fs').promises
 const path = require('path')
@@ -15,15 +16,38 @@ async function Main () {
     await fs.cp(originPath, tempPath, {recursive: true, filter: (source, dest) => !source.includes(installsFolder)})
 
     for(const branch of deployableBranches) {
-        console.log("Setting up", branch);
-        const localPath = path.resolve(__dirname, '..', installsFolder, branch)
-        await fs.mkdir(localPath, {recursive: true})
-        await fs.cp(tempPath, localPath, {recursive: true})
-        const localGit = simpleGit.simpleGit(localPath)
-        await localGit.checkout(branch);
+        try {
+
+            console.log("Setting up", branch);
+            const localPath = path.resolve(__dirname, '..', installsFolder, branch)
+            await fs.mkdir(localPath, {recursive: true})
+            await fs.cp(tempPath, localPath, {recursive: true})
+            const localGit = simpleGit.simpleGit(localPath)
+            await localGit.checkout(branch);
+            await new Promise((res, rej) => {
+                exec("npm i", {cwd: localPath}, (err, stdout, stderr) => {
+                    if (err) {
+                        rej(stderr)
+                    } else {
+                        res(stdout)
+                    }
+                })
+            })
+            await new Promise((res, rej) => {
+                exec("npm run deploy", {cwd: localPath}, (err, stdout, stderr) => {
+                    if (err) {
+                        rej(stderr)
+                    } else {
+                        res(stdout)
+                    }
+                })
+            })
+        } catch (error) {
+            console.log(`Failed to deploy branch ${branch}, reason ${error.toString()}`)
+        }
     }
 
-    await fs.rmdir(tempPath, { recursive: true, force: true });
+    await fs.rm(tempPath, { recursive: true, force: true });
 }
 
 Main()
