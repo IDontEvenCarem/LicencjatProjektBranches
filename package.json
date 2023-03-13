@@ -1,0 +1,14 @@
+{
+  "name": "ko-licencjat-projekt",
+  "version": "0.1.0",
+  "description": "Projekt licencjacki Kajetana Owczarka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kajetan Owczarek",
+  "license": "ISC",
+  "devDependencies": {
+    "simple-git": "^3.17.0"
+  }
+}
