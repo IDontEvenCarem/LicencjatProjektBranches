@@ -1,0 +1,31 @@
+.header {
+    --red: 255;
+    --green: 169;
+    --blue: 106;
+    grid-area: header;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'logo . buttons';
+    padding: 10px;
+}
+
+.header img {
+    width: 100%;
+    grid-area: logo;
+}
+
+.header .buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2ch;
+}
+
+.header .buttons a {
+    color: inherit;
+}
+.header .buttons a:hover {
+    background-color: calc(darken(var));
+}
