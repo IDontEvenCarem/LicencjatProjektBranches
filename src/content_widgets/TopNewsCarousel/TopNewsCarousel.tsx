@@ -1,8 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel'
+import './TopNewsCarousel.css'
 
-export default function TopCarousel () {
+export default function TopNewsCarousel () {
     return (
-        <div>
+        <div className='top-news-carousel ac'> 
             <Carousel>
                 <Carousel.Item>
                     <div style={{minHeight: '200px'}}></div>
@@ -25,7 +26,6 @@ export default function TopCarousel () {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi pariatur veritatis aliquam temporibus asperiores. Ipsam voluptatem dicta et pariatur distinctio earum explicabo rem eligendi repellendus praesentium dolor quaerat, facilis magni!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                
             </Carousel>
         </div>
     )
