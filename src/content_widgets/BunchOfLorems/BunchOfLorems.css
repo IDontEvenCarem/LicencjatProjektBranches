@@ -1,0 +1,5 @@
+.lorem-wall-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row dense;
+}
