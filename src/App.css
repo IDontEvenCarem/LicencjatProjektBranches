@@ -5,7 +5,7 @@
 
 .App {
   display: grid;
-  grid-template-columns: 1fr minmax(max-content, 4fr) 1fr;
+  grid-template-columns: 1fr minmax(min-content, 4fr) 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: 
     "header header header"

@@ -1,10 +1,12 @@
-import TopCarousel from './TopCarousel'
+import TopNewsCarousel from './content_widgets/TopNewsCarousel/TopNewsCarousel'
 import './Content.css'
+import MiscTopBar from './content_widgets/MiscTopBar/MiscTopBar'
 
 function Content () {
     return (
         <div className="content ac">
-            <TopCarousel></TopCarousel>
+            <MiscTopBar></MiscTopBar>
+            <TopNewsCarousel></TopNewsCarousel>
         </div>
     )
 }
