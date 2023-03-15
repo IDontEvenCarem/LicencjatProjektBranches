@@ -35,6 +35,12 @@ const funkyTitles = [
     "Delfin zostaje mianowany nowym dyrektorem zoo i wprowadza szereg nowych zmian w funkcjonowaniu placówki",
     "Księżyc zmienia kolor na fioletowy - naukowcy zaskoczeni tym zjawiskiem",
     "Najnowsze badania wykazują, że jedzenie popcornu pod prysznicem może znacznie poprawić samopoczucie",
+    "Badania wykazują, że ciastka z krewetkami są nowym hitem kulinarnym",
+    "Robot o imieniu Alfred zastąpił prezenterów w głównych telewizyjnych serwisach informacyjnych",
+    "Mieszkaniec małego miasteczka znalazł wyjście z labiryntu, którym był dla niego sklep spożywczy",
+    "Badania naukowe dowodzą, że ruchy tańca robota wpływają pozytywnie na samopoczucie ludzi",
+    "Najnowsza moda wśród psów - farbowanie sierści na różne kolory",
+    "Papuga zaczyna komunikować się z ludźmi w języku hiszpańskim, którego nigdy wcześniej nie słyszała"
 ]
 
 export default function BunchOfLorems () {
