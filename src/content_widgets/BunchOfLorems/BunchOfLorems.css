@@ -2,4 +2,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row dense;
+    gap: 10px;
+}
+
+.lorem-card {
+    grid-row: span var(--height);
+    grid-column: span var(--width);
+    --red: 100;
+    --blue: 100;
+    --green: 100;
+    text-align: left;
+}
+
+.lorem-card > img {
+    width: 100%;
+}
+.lorem-card > .title {
+    padding: 2ch;
+    font-weight: bold;
+}
+.lorem-wall-container > .read-more {
+    --red: 100;
+    --blue: 100;
+    --green: 100;
+    grid-column: 1/4;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
 }
