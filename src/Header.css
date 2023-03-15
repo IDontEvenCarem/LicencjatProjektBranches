@@ -8,6 +8,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'logo . buttons';
     padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header img {

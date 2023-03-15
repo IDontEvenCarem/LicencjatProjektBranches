@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './Header'
 import Content from './Content'
 import SideAdds from './SideAdds'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Content />
       <SideAdds side='left'></SideAdds>
       <SideAdds side='right'></SideAdds>
+      <Footer></Footer>
     </div>
   )
 }
