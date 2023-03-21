@@ -8,19 +8,18 @@ import { funkyTitles } from '../../Constants'
 
 
 export default function BunchOfLorems () {
-    const [limit, setLimit] = useState(9)
-    const [dataToRender,] = useState(
-        _(funkyTitles).map((v, i) => ({v, i})).shuffle().map(v => {
-            return {
-                title: v.v,
-                id: v.i
-            }
-        }).value()
-    )
+    const [limit, setLimit] = useState(9);
+    (window as any)['bunchOfLoremsData'] = (window as any).bunchOfLoremsData || _(funkyTitles).map((v, i) => ({v, i})).shuffle().map(v => {
+        return {
+            title: v.v,
+            id: v.i
+        }
+    }).value()
+    const data = (window as any as {bunchOfLoremsData: [{title: string, id: number}]}).bunchOfLoremsData
 
     return (
         <div className="lorem-wall-container">
-            {_(dataToRender).take(limit).value().map((data, i) => (
+            {_(data).take(limit).value().map((data, i) => (
                 <Link to={`/article/${data.id}`} key={i} className='lorem-card hoversec ac'>
                     <img src={`https://picsum.photos/seed/${data.title.split('').reduce((prev, curr) => curr.charCodeAt(0) + prev, 0)}/450/300?`}></img>
                     <div className='title'>{data.title}</div>
