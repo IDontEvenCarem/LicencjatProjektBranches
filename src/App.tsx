@@ -5,16 +5,13 @@ import Header from './Header'
 import Content from './Content'
 import SideAdds from './SideAdds'
 import Footer from './Footer'
+import Shell from './Shell'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Content />
-      <SideAdds side='left'></SideAdds>
-      <SideAdds side='right'></SideAdds>
-      <Footer></Footer>
-    </div>
+    <Shell>
+      <Content></Content>
+    </Shell>
   )
 }
 
