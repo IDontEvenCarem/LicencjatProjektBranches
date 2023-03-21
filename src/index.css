@@ -19,6 +19,18 @@
   background-color: rgb(var(--red), var(--green), var(--blue));
 }
 
+.csec {
+  --red: var(--csec-r);
+  --green: var(--csec-g);
+  --blue: var(--csec-b);
+}
+
+.cpri {
+  --red: var(--cpri-r);
+  --green: var(--cpri-g);
+  --blue: var(--cpri-b);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

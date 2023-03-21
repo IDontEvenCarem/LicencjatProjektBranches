@@ -6,12 +6,16 @@ import Content from './Content'
 import SideAdds from './SideAdds'
 import Footer from './Footer'
 import Shell from './Shell'
+import FloatingElements from './FloatingElements'
 
 function App() {
   return (
-    <Shell>
-      <Content></Content>
-    </Shell>
+    <>
+      <FloatingElements></FloatingElements>
+      <Shell>
+        <Content></Content>
+      </Shell>
+    </>
   )
 }
 

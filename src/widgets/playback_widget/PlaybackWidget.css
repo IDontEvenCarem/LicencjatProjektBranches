@@ -1,0 +1,20 @@
+.playback-widget {
+    border: 5px solid rgb(var(--csec-r), var(--csec-g), var(--csec-b));
+    pointer-events: all;
+    padding: 0;
+}
+.playback-widget > .top-bar {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    text-align: left;
+    padding-bottom: 7.5px;
+}
+.playback-widget > .top-bar > .close-button {
+    cursor: pointer;
+}
+.playback-widget > video {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: min-content;
+}
