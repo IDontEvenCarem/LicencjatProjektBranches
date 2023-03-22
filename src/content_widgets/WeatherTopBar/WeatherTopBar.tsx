@@ -8,26 +8,33 @@ enum LoadedState {
     ERROR
 };
 
+let globalState = {} as any 
+
 export default function WeatherTopBar () {
     const [loadingState, setLoadingState] = useState(LoadedState.NOT_LOADED)
-    const [data, setData] = useState({} as any) 
-    
+    const [data, setData] = useState(globalState) 
+
     useEffect(() => {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(position => {
-                const locationQS = `latitude=${position.coords.latitude.toFixed(2)}&longitude=${position.coords.longitude.toFixed(2)}`
-                const settingsQS = `current_weather=true&timezone=auto&forecast_days=1&daily=precipitation_probability_mean`
-                fetch(`https://api.open-meteo.com/v1/forecast?${locationQS}&${settingsQS}`)
-                    .then(response => response.json())
-                    .then(json => {
-                        setData(json)
-                        console.log(json)
-                        setLoadingState(LoadedState.LOADED)
-                    })
-                    .catch(err => {
-                        setLoadingState(LoadedState.ERROR)
-                    })
-            })
+            if (Object.entries(globalState).length === 0) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const locationQS = `latitude=${position.coords.latitude.toFixed(2)}&longitude=${position.coords.longitude.toFixed(2)}`
+                    const settingsQS = `current_weather=true&timezone=auto&forecast_days=1&daily=precipitation_probability_mean`
+                    fetch(`https://api.open-meteo.com/v1/forecast?${locationQS}&${settingsQS}`)
+                        .then(response => response.json())
+                        .then(json => {
+                            globalState = json
+                            setData(json)
+                            setLoadingState(LoadedState.LOADED)
+                        })
+                        .catch(err => {
+                            setLoadingState(LoadedState.ERROR)
+                        })
+                })
+            } else {
+                setData(globalState)
+                setLoadingState(LoadedState.LOADED)
+            }
         } else {
             setLoadingState(LoadedState.ERROR)
         }
