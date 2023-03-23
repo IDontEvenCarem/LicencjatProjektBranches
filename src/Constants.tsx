@@ -37,3 +37,7 @@ export const funkyTitles = [
     "Najnowsza moda wśród psów - farbowanie sierści na różne kolory",
     "Papuga zaczyna komunikować się z ludźmi w języku hiszpańskim, którego nigdy wcześniej nie słyszała"
 ]
+
+export function textToLoremLink(text: string, width: number, height: number) {
+    return `https://picsum.photos/seed/${text.split('').reduce((prev, curr) => curr.charCodeAt(0) + prev, 0)}/${width}/${height}`
+}

@@ -1,0 +1,30 @@
+.article {
+    text-align: left;
+}
+
+.article > p {
+    padding: 2ch 4ch 0ch;
+}
+
+.article-heading {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr max-content;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.article-heading > img {
+    grid-area: 1/1/3/2;
+}
+
+.article-heading > .heading-bottom {
+    grid-area: 2/1/3/2;
+    padding: 8ch 4ch 2ch;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+.heading-bottom > .stub {
+    font-size: x-large;
+    font-weight: bold;
+}
