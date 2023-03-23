@@ -11,7 +11,6 @@ import FloatingElements from './FloatingElements'
 function App() {
   return (
     <>
-      <FloatingElements></FloatingElements>
       <Shell>
         <Content></Content>
       </Shell>

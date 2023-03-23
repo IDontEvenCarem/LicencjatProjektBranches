@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router'
 import { createHashRouter } from 'react-router-dom'
 import App from './App'
 import Article from './Article'
+import FloatingElements from './FloatingElements'
 import './index.css'
 
 const router = createHashRouter([
@@ -13,12 +14,14 @@ const router = createHashRouter([
   },
   {
     path: '/article/:articleId',
-    element: <Article></Article>
+    element: <Article></Article>,
+    
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
+    <FloatingElements></FloatingElements>
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )
