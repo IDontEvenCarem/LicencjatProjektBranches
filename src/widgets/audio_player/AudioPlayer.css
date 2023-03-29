@@ -1,0 +1,12 @@
+.audio-player {
+    width: 100%;
+    padding: 2ch 4ch;
+}
+
+.audio-player-background {
+    height: 80px;
+    background-color: black;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 80px 1fr max-content;
+}
