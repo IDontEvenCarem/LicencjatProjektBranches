@@ -16,6 +16,7 @@
 
 .lorem-card > img {
     width: 100%;
+    height: auto;
 }
 .lorem-card > .title {
     padding: 2ch;

@@ -26,7 +26,7 @@ export default function BunchOfLorems () {
         <div className="lorem-wall-container">
             {_(data).take(limit).value().map((data, i) => (
                 <Link to={`/article/${data.id}`} key={i} className='lorem-card hoversec ac'>
-                    <img src={textToLoremLink(data.title, 450, 300)}></img>
+                    <img src={textToLoremLink(data.title, 450, 300)} width={450} height={300}></img>
                     <div className='title'>{data.title}</div>
                 </Link>
             ))}
