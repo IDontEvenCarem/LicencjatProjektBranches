@@ -4,6 +4,7 @@ import Shell from "./Shell";
 import './Article.css'
 import { faker } from "@faker-js/faker";
 import { useEffect, useLayoutEffect } from "react";
+import AudioPlayer from "./widgets/audio_player/AudioPlayer";
 
 export default function Article () {
     const params = useParams()
@@ -31,17 +32,19 @@ export default function Article () {
                     </div>
                 </div>
 
+                {articleTitle.codePointAt(0)! % 2 === 0 && <AudioPlayer></AudioPlayer>}
+
                 <p>
-                    {faker.lorem.sentences(10)}
+                    {faker.lorem.sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(10)}
+                    {faker.lorem.sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(10)}
+                    {faker.lorem.sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(10)}
+                    {faker.lorem.sentences(30)}
                 </p>
             </div>
         </Shell>
