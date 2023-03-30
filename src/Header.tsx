@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Header () {
     return (
-        <div className="header ac">
+        <div className="header c-a">
             <Link to="/">
                 <img src={logoUrl}></img>
             </Link>

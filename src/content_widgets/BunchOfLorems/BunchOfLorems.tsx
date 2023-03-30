@@ -25,14 +25,14 @@ export default function BunchOfLorems () {
     return (
         <div className="lorem-wall-container">
             {_(data).take(limit).value().map((data, i) => (
-                <Link to={`/article/${data.id}`} key={i} className='lorem-card hoversec ac'>
+                <Link to={`/article/${data.id}`} key={i} className='lorem-card ac'>
                     <img src={textToLoremLink(data.title, 450, 300)} width={450} height={300}></img>
                     <div className='title'>{data.title}</div>
                 </Link>
             ))}
             {
                 limit < funkyTitles.length && 
-                <div className='read-more hoversec ac' onClick={() => setLimit(v => v+9)}>
+                <div className='read-more ac' onClick={() => setLimit(v => v+9)}>
                     Pokaż więcej
                 </div>
             }
