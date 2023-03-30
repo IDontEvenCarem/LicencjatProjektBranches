@@ -87,6 +87,14 @@
   }
 }
 
+.font-raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
 .hoversec {
   transition: background-color 300ms, color 300ms;
 }

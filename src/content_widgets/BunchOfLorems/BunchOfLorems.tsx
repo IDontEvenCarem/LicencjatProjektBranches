@@ -4,6 +4,7 @@ import './BunchOfLorems.css'
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { funkyTitles, textToLoremLink } from '../../Constants'
+import NewsCard from './NewsCard'
 
 
 let globLimit = 9
@@ -25,10 +26,7 @@ export default function BunchOfLorems () {
     return (
         <div className="lorem-wall-container">
             {_(data).take(limit).value().map((data, i) => (
-                <Link to={`/article/${data.id}`} key={i} className='lorem-card ac'>
-                    <img src={textToLoremLink(data.title, 450, 300)} width={450} height={300}></img>
-                    <div className='title'>{data.title}</div>
-                </Link>
+                <NewsCard key={i} id={data.id} title={data.title}></NewsCard>
             ))}
             {
                 limit < funkyTitles.length && 

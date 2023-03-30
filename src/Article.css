@@ -4,6 +4,8 @@
 
 .article > p {
     padding: 2ch 4ch 0ch;
+    color: var(--c-txt-pos);
+    font-size: large;
 }
 
 .article-heading {
@@ -21,12 +23,17 @@
     height: auto;
 }
 
+.article-title {
+    font-family: 'Rubik', sans-serif;
+}
+
 .article-heading > .heading-bottom {
     grid-area: 2/1/3/2;
     padding: 8ch 4ch 2ch;
-    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    color: var(--c-txt-pos);
+    background: linear-gradient(to top, var(--c-txt-neg) 20%, rgba(255, 255, 255, 0));
 }
-.heading-bottom > .stub {
+.article-stub {
     font-size: x-large;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
 }

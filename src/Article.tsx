@@ -19,14 +19,14 @@ export default function Article () {
 
     return (
         <Shell>
-            <div className="ac cpri article content">
+            <div className="ac article content">
                 <div className="article-heading">
                     <img src={textToLoremLink(articleTitle, 1250, 600)} width={1250} height={600}></img>
                     <div className="heading-bottom">
-                        <h1 className="title">
+                        <h1 className="article-title">
                             {articleTitle}
                         </h1>
-                        <p className="stub">
+                        <p className="article-stub">
                             {faker.lorem.sentence()}
                         </p>
                     </div>
