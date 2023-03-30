@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker'
+import { faker, CompanyModule } from '@faker-js/faker'
 import './AudioPlayer.css'
 
 export default function AudioPlayer () {

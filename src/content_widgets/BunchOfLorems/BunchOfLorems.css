@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row dense;
-    gap: 10px;
+    gap: 15px;
 }
 
 .lorem-card {
@@ -12,12 +12,16 @@
     --blue: 100;
     --green: 100;
     text-align: left;
-    transition: background-color 300ms, color 300ms;
+    transition: background-color 300ms, color 300ms, filter 300ms, transition 300ms;
+    filter: drop-shadow(0px 0px 0px var(--c-b));
 }
+
 .lorem-card:hover {
     --red: var(--c-a-r);
     --green: var(--c-a-g);
     --blue: var(--c-a-b);
+    filter: drop-shadow(calc(var(--hover-x, 0) * -8px) calc(var(--hover-y, 0) * -8px) 0px var(--c-b));
+    transition: filter 10ms, transition 300ms;
 }
 
 .lorem-card > img {

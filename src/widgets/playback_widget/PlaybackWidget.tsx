@@ -23,7 +23,7 @@ export default function PlaybackWidget () {
     const space = document.querySelector(".side-add")?.getBoundingClientRect().width || 180
 
     return (
-        <div className="playback-widget ac csec" style={{width: `${space-5}px`}}>
+        <div className="playback-widget ac c-a" style={{width: `${space-5}px`}}>
             <div className='top-bar'>
                 <strong>Wiosna się zaczyna!</strong>
                 <span onClick={() => setClosed(true)} className={"material-symbols-rounded close-button"}>close</span>

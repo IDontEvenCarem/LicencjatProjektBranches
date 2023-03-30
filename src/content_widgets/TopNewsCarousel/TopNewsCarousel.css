@@ -30,7 +30,10 @@
     grid-area: 1/1/2/2;
 }
 
-.top-news-description > * {
-    /* filter: drop-shadow(0px 0px 4px black); */
+.top-news-description {
     color: var(--c-txt-pos);
+}
+
+.top-news-description > h2 {
+    font-family: 'Rubik', sans-serif;
 }

@@ -1,7 +1,8 @@
 .playback-widget {
-    border: 5px solid rgb(var(--csec-r), var(--csec-g), var(--csec-b));
+    border: 5px solid rgb(var(--c-a-r), var(--c-a-g), var(--c-a-b));
     pointer-events: all;
     padding: 0;
+    filter: drop-shadow(4px 4px 0px var(--c-b));
 }
 .playback-widget > .top-bar {
     display: grid;
