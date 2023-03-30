@@ -12,6 +12,12 @@
     --blue: 100;
     --green: 100;
     text-align: left;
+    transition: background-color 300ms, color 300ms;
+}
+.lorem-card:hover {
+    --red: var(--c-a-r);
+    --green: var(--c-a-g);
+    --blue: var(--c-a-b);
 }
 
 .lorem-card > img {
@@ -31,5 +37,10 @@
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-
+    transition: background-color 300ms, color 300ms;
+}
+.lorem-wall-container > .read-more:hover {
+    --red: var(--c-a-r);
+    --green: var(--c-a-g);
+    --blue: var(--c-a-b);
 }

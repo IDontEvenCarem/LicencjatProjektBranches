@@ -32,13 +32,14 @@
 }
 
 :root {
+  margin: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -55,9 +56,36 @@
   --csec-g: 169;
   --csec-b: 106;
 
+  --c-txt-pos: black;
+  --c-txt-neg: white;
+
+  --c-a: #52d1dc;
+  --c-a-r: 82;
+  --c-a-g: 209;
+  --c-a-b: 220;
+  --c-b: #475B5A;
+  --c-c: #8D8E8E;
+  --c-d: #A3A9AA;
+  --c-e: #BBBBBF;
+
   --color-text-secondary: black;
 }
 
+.c-a {
+  background-color: var(--c-a);
+  --red: var(--c-a-r);
+  --green: var(--c-a-g);
+  --blue: var(--c-a-b);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-txt-pos: white;
+    --c-txt-neg: black;
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
 
 .hoversec {
   transition: background-color 300ms, color 300ms;
@@ -77,7 +105,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: black;
+  background-color: var(--c-txt-neg);
 }
 
 h1 {
@@ -93,12 +121,3 @@ h1 {
   'opsz' 48
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  body {
-    background-color: white;
-  }
-}

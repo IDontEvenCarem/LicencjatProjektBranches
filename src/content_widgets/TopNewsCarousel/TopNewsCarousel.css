@@ -12,8 +12,15 @@
 }
 
 .top-news-darken {
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, var(--c-txt-neg), rgba(0, 0, 0, 0) 80%);
     grid-area: 1/1/2/2;
+}
+
+@media (prefers-color-scheme: light) {
+    .carousel-indicators,.carousel-control-prev,.carousel-control-next {
+        filter: invert();
+    }
+    
 }
 
 .top-news-img {
@@ -24,5 +31,6 @@
 }
 
 .top-news-description > * {
-    filter: drop-shadow(0px 0px 4px black);
+    /* filter: drop-shadow(0px 0px 4px black); */
+    color: var(--c-txt-pos);
 }
