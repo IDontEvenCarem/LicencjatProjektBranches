@@ -37,3 +37,7 @@
 .top-news-description > h2 {
     font-family: 'Rubik', sans-serif;
 }
+
+.top-news-description > p {
+    font-family: 'Josefin Sans';
+}

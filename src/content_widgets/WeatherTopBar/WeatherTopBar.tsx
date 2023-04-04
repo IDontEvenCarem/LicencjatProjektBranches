@@ -50,7 +50,7 @@ export default function WeatherTopBar () {
     return (
         <div className='weather-bar ac c-a'>
             <div className='fullel'>
-                <h3>Pogoda</h3>
+                <h1>Pogoda</h1>
             </div>
             {loadingState === LoadedState.LOADED && (<>
                 <div className='el'>
