@@ -7,6 +7,11 @@
     min-height: 100px;
     padding: 10px;
     text-align: center;
+    font-family: 'Josefin Sans';
+}
+
+.weather-bar h1 {
+    margin: 0;
 }
 
 .weather-bar > .el {

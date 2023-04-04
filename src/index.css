@@ -114,6 +114,34 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--c-txt-neg);
+  font-family: 'Lato';
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('fonts/JosefinSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('fonts/JosefinSans-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato-Italic.ttf');
+  font-style: italic;
 }
 
 h1 {
