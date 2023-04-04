@@ -46,10 +46,9 @@ export default function WeatherTopBar () {
         let index = Math.round(azimuth / 45);
         return directions[index];
     }
-      
-
+    
     return (
-        <div className='weather-bar ac'>
+        <div className='weather-bar ac c-a'>
             <div className='fullel'>
                 <h3>Pogoda</h3>
             </div>
