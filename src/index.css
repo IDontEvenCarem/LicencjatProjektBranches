@@ -119,28 +119,28 @@ body {
 
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('fonts/JosefinSans-Regular.ttf');
+  src: url('assets/fonts/JosefinSans-Regular.ttf');
 }
 @font-face {
   font-family: 'Josefin Sans';
-  src: url('fonts/JosefinSans-Bold.ttf');
+  src: url('assets/fonts/JosefinSans-Bold.ttf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Regular.ttf');
+  src: url('assets/fonts/Lato-Regular.ttf');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Bold.ttf');
+  src: url('assets/fonts/Lato-Bold.ttf');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/Lato-Italic.ttf');
+  src: url('assets/fonts/Lato-Italic.ttf');
   font-style: italic;
 }
 
