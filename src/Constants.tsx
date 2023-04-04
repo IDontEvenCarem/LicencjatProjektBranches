@@ -38,6 +38,21 @@ export const funkyTitles = [
     "Papuga zaczyna komunikować się z ludźmi w języku hiszpańskim, którego nigdy wcześniej nie słyszała"
 ]
 
+export const imageLinks = [
+    "01812.png",
+    "01813.png",
+    "01814.png",
+    "01815.png",
+    "01816.png",
+    "01817.png",
+    "01818.png",
+    "01819.png",
+    "01820.png",
+    "01822.png",
+    "01824.png",
+    "00022.png"
+]
+
 export function textToLoremLink(text: string, width: number, height: number) {
     return `https://picsum.photos/seed/${text.split('').reduce((prev, curr) => curr.charCodeAt(0) + prev, 0)}/${width}/${height}`
 }

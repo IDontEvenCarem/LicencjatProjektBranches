@@ -3,7 +3,7 @@ import './Shell.css'
 import React from 'react'
 import Footer from "./Footer";
 import Header from "./Header";
-import SideAdds from "./SideAdds";
+import SideAdds from "./content_widgets/SideAdds/SideAdds";
 
 
 export default function Shell (props: React.PropsWithChildren<{}>) {
