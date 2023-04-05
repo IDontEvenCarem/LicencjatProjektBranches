@@ -2,7 +2,7 @@ import { funkyTitles, textToLoremLink } from "./Constants";
 import { useParams } from 'react-router-dom'
 import Shell from "./Shell";
 import './Article.css'
-import { faker } from "@faker-js/faker";
+import {sentence, sentences} from './lib/LoremIpsum'
 import { useEffect, useLayoutEffect } from "react";
 import AudioPlayer from "./widgets/audio_player/AudioPlayer";
 
@@ -27,7 +27,7 @@ export default function Article () {
                             {articleTitle}
                         </h1>
                         <p className="article-stub">
-                            {faker.lorem.sentence()}
+                            {sentence()}
                         </p>
                     </div>
                 </div>
@@ -35,16 +35,16 @@ export default function Article () {
                 {articleTitle.codePointAt(0)! % 2 === 0 && <AudioPlayer></AudioPlayer>}
 
                 <p>
-                    {faker.lorem.sentences(30)}
+                    {sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(30)}
+                    {sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(30)}
+                    {sentences(30)}
                 </p>
                 <p>
-                    {faker.lorem.sentences(30)}
+                    {sentences(30)}
                 </p>
             </div>
         </Shell>

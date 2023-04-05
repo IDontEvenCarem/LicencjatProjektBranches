@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel'
 import './TopNewsCarousel.css'
 import {funkyTitles, textToLoremLink} from '../../Constants'
-import { faker } from '@faker-js/faker';
+import { sentences } from '../../lib/LoremIpsum';
 
 export default function TopNewsCarousel () {
     const news = funkyTitles.slice(0, 3);
@@ -17,7 +17,7 @@ export default function TopNewsCarousel () {
                         </div>
                         <Carousel.Caption className='top-news-description'>
                             <h2>{newstext}</h2>
-                            <p>{faker.lorem.sentences()}</p>
+                            <p>{sentences()}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 ))}

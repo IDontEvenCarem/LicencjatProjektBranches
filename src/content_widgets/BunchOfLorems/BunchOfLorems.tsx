@@ -1,8 +1,6 @@
-import {faker} from '@faker-js/faker'
 import _ from 'lodash'
 import './BunchOfLorems.css'
 import {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
 import { funkyTitles, textToLoremLink } from '../../Constants'
 import NewsCard from './NewsCard'
 

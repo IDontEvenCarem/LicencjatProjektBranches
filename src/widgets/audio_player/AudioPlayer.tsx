@@ -1,14 +1,14 @@
-import { faker, CompanyModule } from '@faker-js/faker'
 import './AudioPlayer.css'
 import { useState, useEffect, useRef } from 'react'
 import {Howl} from 'howler'
 import {fromS} from 'hh-mm-ss'
 
 import Polygondwanaland from '../../assets/Polygondwanaland.mp4'
+import { catchPhrase } from '../../lib/CompanyBs'
 
 export default function AudioPlayer () {
     const [playing, setPlaying] = useState(false)
-    const [title, _] = useState(faker.company.catchPhrase())
+    const [title, _] = useState(catchPhrase())
     const [howl, setHowl] = useState<Howl|undefined>(undefined)
     const bar = useRef<HTMLDivElement>(null)
     const timeText = useRef<HTMLDivElement>(null)
