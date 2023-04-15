@@ -9,7 +9,6 @@ import Shell from './Shell'
 
 const Article = React.lazy(() => import("./Article"))
 
-
 const router = createHashRouter([
   {
     path: '/',
