@@ -1,5 +1,6 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/scss/bootstrap-reboot.scss'
+
 import Content from './Content'
 import Shell from './Shell'
 
