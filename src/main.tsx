@@ -14,8 +14,7 @@ const router = createHashRouter([
   },
   {
     path: '/article/:articleId',
-    element: <Article></Article>,
-    
+    element: <Article></Article>
   }
 ])
 
