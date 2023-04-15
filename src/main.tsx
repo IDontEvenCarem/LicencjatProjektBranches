@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router'
 import { createHashRouter } from 'react-router-dom'
 import App from './App'
-import Article from './Article'
 import FloatingElements from './FloatingElements'
 import './index.css'
+import Shell from './Shell'
+
+const Article = React.lazy(() => import("./Article"))
 
 
 const router = createHashRouter([
@@ -15,7 +17,9 @@ const router = createHashRouter([
   },
   {
     path: '/article/:articleId',
-    element: <Article></Article>
+    element: <React.Suspense fallback={<Shell><div>Wczytywanie...</div></Shell>}>
+      <Article></Article>
+    </React.Suspense>,
   }
 ])
 
