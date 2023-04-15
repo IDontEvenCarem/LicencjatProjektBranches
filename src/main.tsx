@@ -6,6 +6,7 @@ import App from './App'
 import Article from './Article'
 import FloatingElements from './FloatingElements'
 import './index.css'
+import './styles.pure.css'
 
 const router = createHashRouter([
   {
