@@ -7,6 +7,8 @@ import NewsCard from './NewsCard'
 let globLimit = 9
 let savedResponse = undefined as {title: string, idx: number}[]|undefined
 
+const fetchUrl = import.meta.env.PROD ? "/" : "http://localhost:8012/"; 
+
 export default function BunchOfLorems () {
     const [limit, setLimit] = useState(globLimit);
     const [response, setResponse] = useState(savedResponse)
@@ -16,7 +18,7 @@ export default function BunchOfLorems () {
     }, [limit]);
 
     useEffect(()=>{
-        fetch("http://localhost:8012/api/postStubs?postsPerPage=9")
+        fetch(`${fetchUrl}api/postStubs?postsPerPage=9`)
             .then(res => res.json())
             .then(json => {
                 savedResponse = json
