@@ -1,13 +1,11 @@
 import './BunchOfLorems.css'
 import {useState, useEffect} from 'react'
-import { funkyTitles } from '../../Constants'
+import { funkyTitles, fetchUrl } from '../../Constants'
 import NewsCard from './NewsCard'
 
 
 let globLimit = 9
 let savedResponse = undefined as {title: string, idx: number}[]|undefined
-
-const fetchUrl = import.meta.env.PROD ? "/" : "http://localhost:8012/"; 
 
 export default function BunchOfLorems () {
     const [limit, setLimit] = useState(globLimit);

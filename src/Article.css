@@ -2,7 +2,7 @@
     text-align: left;
 }
 
-.article > p {
+.article p {
     padding: 2ch 4ch 0ch;
     color: var(--c-txt-pos);
     font-size: large;

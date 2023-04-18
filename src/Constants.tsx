@@ -1,3 +1,5 @@
+export const fetchUrl = import.meta.env.PROD ? "/" : "http://localhost:8012/"
+
 // I generate those with ChatGPT
 export const funkyTitles = [
     "Odkryto nową planetę pełną masła orzechowego",
