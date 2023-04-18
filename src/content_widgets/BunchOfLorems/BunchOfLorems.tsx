@@ -1,33 +1,39 @@
-import {faker} from '@faker-js/faker'
-import _ from 'lodash'
 import './BunchOfLorems.css'
 import {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
-import { funkyTitles, textToLoremLink } from '../../Constants'
+import { funkyTitles } from '../../Constants'
 import NewsCard from './NewsCard'
 
 
 let globLimit = 9
+let savedResponse = undefined as {title: string, idx: number}[]|undefined
 
 export default function BunchOfLorems () {
     const [limit, setLimit] = useState(globLimit);
+    const [response, setResponse] = useState(savedResponse)
+    
     useEffect(() => {
         globLimit = limit
     }, [limit]);
 
-    (window as any)['bunchOfLoremsData'] = (window as any).bunchOfLoremsData || _(funkyTitles).map((v, i) => ({v, i})).shuffle().map(v => {
-        return {
-            title: v.v,
-            id: v.i
-        }
-    }).value()
-    const data = (window as any as {bunchOfLoremsData: [{title: string, id: number}]}).bunchOfLoremsData
+    useEffect(()=>{
+        fetch("http://localhost:8012/api/postStubs?postsPerPage=9")
+            .then(res => res.json())
+            .then(json => {
+                savedResponse = json
+                setResponse(json)
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }, []);
 
     return (
         <div className="lorem-wall-container">
-            {_(data).take(limit).value().map((data, i) => (
-                <NewsCard key={i} id={data.id} title={data.title}></NewsCard>
-            ))}
+            {
+                response 
+                ? response.map(v => (<NewsCard key={v.idx} id={v.idx} title={v.title}></NewsCard>)) 
+                : <h3>Wczytywanie...</h3>
+            }
             {
                 limit < funkyTitles.length && 
                 <div className='read-more ac' onClick={() => setLimit(v => v+9)}>

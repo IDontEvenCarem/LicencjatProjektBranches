@@ -6,6 +6,11 @@ app.use(express.urlencoded({extended: false}))
 
 const port = process.env['KO_LIC_CONTENT_SERVER_PORT'] || 8012
 
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    next()
+})
+
 app.get('/api/postStubs', (req, res) => {
     const postsPerPage = req.query['postsPerPage'] || 10
     const page = req.query['page'] || 0
